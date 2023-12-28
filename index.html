@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="./manifest.json">
+    <title>Js - Game</title>
+    <link rel="stylesheet" href="./css/start-menu.css">
+    <link rel="stylesheet" href="./css/in-game.css">
+    <script type="module" src="./src/index.js" defer></script>
+</head>
+
+<body>
+    <main class="container" id="container"></main>
+
+    <div class="Start-Menu-Container" id="startMenuContainer">
+        <h1 class="Title" id="title">Rock, Paper, Scissors</h1>
+        <form class="Actions-Menu" id="actionsMenu">
+            <input type="text" placeholder="Player Name" class="Input-Field" required id="inputName">
+            <input type="submit" class="Button-Start" id="startBtn" value="Play" disabled>
+        </form>
+    </div>
+
+    <template id="firstTemplate">
+        <div>
+            <h1 class="Title-In-Game">Rock, Paper, Scissors</h1>
+        </div>
+        <h4 class="players"><span id="realPlayer"></span> VS JavaScript</h4>
+
+        <div class="containerGame">
+            <div class="box">
+                <button class="rock" id="rock">&#9994</button><br><br>
+                <button class="paper" id="paper">&#9995</button><br><br>
+                <button class="scissors" id="scissors">&#9996</button>
+            </div>
+            <div class="mainScreen" id="mainScreen">
+                <h1 id="gameScreenHeader" class="gameScreenHeader">Press on your choice</h1>
+            </div>
+        </div>
+
+    </template>
+
+    <footer class="footer" id="footer">
+        <h4 hidden id="gameStatus">Game status<span class="gameStatusSpan" id="gameStatusSpan">...</span></h4>
+        <div class="createdBy" id="createdBy">
+            <h4>Created by Valentin with Love</h4>
+        </div>
+        <div id="containerMiniMenu">
+            <button id="musicBtn">Music</button>
+        </div>
+        <audio autoplay src="./audio/default.mp3" id="audio"></audio>
+    </footer>
+</body>
+
+</html>
